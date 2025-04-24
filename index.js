@@ -2,6 +2,9 @@ require('dotenv').config();
 const { Client, GatewayIntentBits } = require('discord.js');
 
 async function main() {
+  console.log("Discord bot started");
+  console.log("Discord token:", process.env.DISCORD_TOKEN);
+  console.log("Channel ID:", process.env.CHANNEL_ID);
   const client = new Client({
     intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
   });
